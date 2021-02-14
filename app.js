@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(helmet);
+app.use(helmet());
 app.use(mainRoutes);
 db.connect()
   .then(() => {
