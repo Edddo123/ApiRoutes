@@ -4,7 +4,7 @@ const db = require("../config/db");
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
-    return res.send('hello')
+    return res.send('<h1>Do u lift bro</h1>')
   });
 router.get("/dbInfo", async (req, res, next) => {
   const results = await db.query("SELECT * FROM apis");
