@@ -1,7 +1,7 @@
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  ssl: this.on,
+  ssl: true,
   connectionString:process.env.DATABASE_URL,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
