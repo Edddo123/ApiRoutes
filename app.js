@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 require("dotenv").config();
-
+const helmet = require("helmet");
 const db = require("./config/db");
 
 const mainRoutes = require("./routes/mainroute");
@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(bodyParser.json());
-
+app.use(helmet);
 app.use(mainRoutes);
 db.connect()
   .then(() => {
